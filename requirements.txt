@@ -1,0 +1,5 @@
+spacy
+pandas
+urllib3
+wordcloud
+matplotlib
