@@ -2,6 +2,7 @@ import spacy
 import urllib3
 import json
 import sys
+import argparse
 import pandas as pd
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
@@ -9,11 +10,16 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 http = urllib3.PoolManager()
 nlp = spacy.load("en_core_web_sm")
 
-print(sys.argv[1])
-try:
-    path_to_adv_file = sys.argv[1]
+parser = argparse.ArgumentParser()
+parser.add_argument("--path", 
+                    help="specify path to advertisers_who_uploaded_a_contact_list_with_your_information.json")
+
+args = parser.parse_args()
+if args.path:
+    path_to_adv_file = args.path
     print("Using path: " + str(path_to_adv_file))
-except:
+   
+else:
     print("Using default path")
     path_to_adv_file = None
 

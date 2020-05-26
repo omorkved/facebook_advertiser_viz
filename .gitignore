@@ -1,0 +1,7 @@
+# Ignore my emacs backups
+*~
+
+# Ignore sensitive FB data
+advertisers_who_uploaded_a_contact_list_with_your_information.json
+
+__pycache__/

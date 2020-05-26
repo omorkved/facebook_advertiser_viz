@@ -18,13 +18,13 @@ You will have to wait a few days for Facebook to process your information and se
 ## Using this script
 <h2> Wordcloud <h2>
   
-Fork and clone into this repo.
+Fork and clone into this repo. Run `./init.sh` to install requirements.
 
 <h4>Option 1:</h4> Download your facebook zip. Unzip. Move this file into the repo: "advertisers_who_uploaded_a_contact_list_with_your_information.json"
 
 (`mv advertisers_who_uploaded_a_contact_list_with_your_information.json /path/to/facebook_advertiser_viz`)
 
-Run: `python3 create_wordcloud.py` 
+Run: `python3 generate.py` 
 
 
 
@@ -32,7 +32,7 @@ Run: `python3 create_wordcloud.py`
 "advertisers_who_uploaded_a_contact_list_with_your_information.json"
 
 
-Run `python3 create_wordcloud.py /path/to/advertisers_who_uploaded_a_contact_list_with_your_information.json`
+Run `python3 generate.py --path "/path/to/advertisers_who_uploaded_a_contact_list_with_your_information.json"`
 
 
 
